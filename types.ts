@@ -1,3 +1,12 @@
+export interface Store {
+  id: string;
+  name: string;
+  billboards: Billboard[];
+  categories: Category[];
+  sizes: Size[];
+  colors: Color[];
+}
+
 export interface Billboard {
   id: string;
   label: string;
