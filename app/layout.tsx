@@ -7,6 +7,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Container } from "@/components/ui/container";
 import { ModalProvider } from "@/providers/modal-provider";
+import { ToastProvider } from "@/providers/toast-provider";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn("antialiased font-sans", urbanist.className)}>
         <Navbar />
+        <ToastProvider />
         <ModalProvider />
         <Container>{children}</Container>
         <Footer />
