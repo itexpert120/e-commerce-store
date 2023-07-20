@@ -6,6 +6,7 @@ import NarbarActions from "@/components/navbar-actions";
 
 import getCategories from "@/actions/get-categories";
 import getStore from "@/actions/get-store";
+import { MobileNav } from "./mobile-nav";
 
 export default async function Navbar() {
   const { name } = await getStore();
@@ -18,6 +19,7 @@ export default async function Navbar() {
             <p className="font-bold text-xl">{name.toUpperCase()}</p>
           </Link>
           <MainNav data={categories} />
+          <MobileNav data={categories} />
           <NarbarActions />
         </div>
       </Container>
